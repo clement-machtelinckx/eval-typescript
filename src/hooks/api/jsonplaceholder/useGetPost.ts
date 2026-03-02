@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { JsonPlaceholderApiUtils } from ".";
+import { JsonPlaceholderApiUtils } from "../../../hooks/api/jsonplaceholder";
 import { postSchema } from "../../../hooks/api/jsonplaceholder/useGetPosts/data";
 
 async function fetchPost(postId: number) {
