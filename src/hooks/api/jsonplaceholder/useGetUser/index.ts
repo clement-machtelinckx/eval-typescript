@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { JsonPlaceholderApiUtils } from "..";
-import { userSchema } from "./data";
+import { userSchema } from "../../../../models/User";
 
 async function fetchUser(userId: number) {
   const response = await fetch(`${JsonPlaceholderApiUtils.usersUrl}/${userId}`);
