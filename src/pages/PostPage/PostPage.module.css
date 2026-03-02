@@ -1,0 +1,26 @@
+.root {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.navigation {
+  display: flex;
+  gap: 1rem;
+}
+
+.link,
+.activeLink {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  background: white;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+}
+
+.activeLink {
+  border-color: #111;
+}
+
+.content {
+  display: grid;
+}
