@@ -1,7 +1,7 @@
 import type { PropsWithChildren } from "react";
 import { Navigate, useParams } from "react-router-dom";
 import { PostContext } from "./PostContext";
-import { useGetPost } from "../hooks/api/jsonplaceholder/useGetPost";
+import { useGetPost } from "../services/api/jsonplaceholder/useGetPost";
 import { parsePositiveInt } from "../utils/parsePositiveInt";
 
 function PostContextProvider({ children }: PropsWithChildren) {
