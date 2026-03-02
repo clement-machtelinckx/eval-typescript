@@ -25,7 +25,7 @@ function Router() {
             <Route path="detail" element={<PostDetailPage />} />
             <Route path="owner/:userId" element={<PostOwnerPage />} />
           </Route>
-          <Route path="not-found" element={<Page404 />} />
+
           <Route path="*" element={<Page404 />} />
         </Route>
       </Routes>
