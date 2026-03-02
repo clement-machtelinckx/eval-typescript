@@ -1,6 +1,4 @@
 import { z } from "zod";
-export { userSchema } from "../../../../models/User";
-export type { User } from "../../../../models/User";
 
 export const postSchema = z.object({
   id: z.number().int().positive(),
