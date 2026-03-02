@@ -1,7 +1,7 @@
 import { Navigate, useParams } from "react-router-dom";
 import UserCard from "../../components/UserCard";
 import { usePostContext } from "../../contexts/PostContext";
-import { useGetUser } from "../../hooks/api/jsonplaceholder/useGetUser";
+import { useGetUser } from "../../hooks/api/jsonplaceholder";
 import { parsePositiveInt } from "../../utils/parsePositiveInt";
 
 function PostOwnerPage() {

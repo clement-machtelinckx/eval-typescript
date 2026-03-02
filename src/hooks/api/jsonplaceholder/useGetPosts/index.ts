@@ -1,22 +1,21 @@
 import { useQuery } from "@tanstack/react-query";
 import { JsonPlaceholderApiUtils } from "..";
-import { userSchema } from "./data";
+import { postsSchema } from "./data";
 
-async function fetchUser(userId: number) {
-  const response = await fetch(`${JsonPlaceholderApiUtils.usersUrl}/${userId}`);
+async function fetchPosts() {
+  const response = await fetch(JsonPlaceholderApiUtils.postsUrl);
 
   if (!response.ok) {
-    throw new Error("Failed to fetch user.");
+    throw new Error("Failed to fetch posts.");
   }
 
   const payload: unknown = await response.json();
-  return userSchema.parse(payload);
+  return postsSchema.parse(payload);
 }
 
-export function useGetUser(userId: number) {
+export function useGetPosts() {
   return useQuery({
-    queryKey: ["user", userId],
-    queryFn: () => fetchUser(userId),
-    enabled: Number.isInteger(userId) && userId > 0,
+    queryKey: ["posts"],
+    queryFn: fetchPosts,
   });
 }
